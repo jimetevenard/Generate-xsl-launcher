@@ -1,0 +1,15 @@
+Hi !
+Welcome to Generate-XSL launcher.
+
+See docs at : https://github.com/jimetevenard/generate-xsl
+
+Usage
+-----
+	[options] scenari-file.xml
+
+Options
+-------
+	--debug-dir | -d <directory> : dir to save intermediate XSLs (for debug purpose)
+	--catalog   | -c <catalog-file.xml> : Path to the catalog file
+	--license   | -l : Use licenced Saxon
+	NB : Rebuild de project with Saxon EE/PE dependency if you want to use it !

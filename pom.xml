@@ -1,0 +1,74 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.jimetevenard</groupId>
+	<artifactId>generate-xsl-launcher</artifactId>
+	<version>0.1.0</version>
+
+	<developers>
+		<developer>
+			<id>jimetevenard</id>
+			<name>Jim Etevenard</name>
+			<email>jetevenard@oxiane.com</email>
+			<url>http://www.github.com/jimetevenard</url>
+			<organization>OXiane</organization>
+			<organizationUrl>http://www.oxiane.com</organizationUrl>
+			<timezone>Europe/Paris</timezone>
+		</developer>
+	</developers>
+
+	<contributors>
+
+	</contributors>
+
+	<licenses>
+		<license>
+			<name>Apache License, Version 2.0</name>
+			<url>https://www.apache.org/licenses/LICENSE-2.0.txt</url>
+		</license>
+	</licenses>
+
+	<scm>
+
+	</scm>
+
+	<!-- ========================================================================= -->
+
+	<properties>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+
+
+	<dependencies>
+		<dependency>
+			<groupId>com.jimetevenard.xml</groupId>
+			<artifactId>generate-xsl</artifactId>
+			<version>0.5.0</version>
+		</dependency>
+		<dependency>
+			<!-- Change this to your favorite Saxon ! -->
+			<groupId>net.sf.saxon</groupId>
+			<artifactId>Saxon-HE</artifactId>
+			<version>9.8.0-12</version>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<configuration>
+					<archive>
+						<manifest>
+							<addClasspath>true</addClasspath>
+							<mainClass>com.jimetevenard.xslt.launcher.Launcher</mainClass>
+						</manifest>
+					</archive>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>
